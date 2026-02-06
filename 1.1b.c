@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+  FILE *fp;
+char ch;
+fp =fopen("data.txt","r");
+if(fp==NULL){
+printf("file not found!\n");
+return 1;
+}
+while((ch=fgetch(fp))!=EOF)
+  putchar(ch);
+fclose(fp);
+return 0;
+}
